@@ -37,6 +37,6 @@ Thank you for your interest in contributing to the Coding Problems Repository! W
 ## Additional Information
 
 - **Issues**: If you encounter any issues or have suggestions for improvements, please open an issue in the repository.
-- **Questions**: For any questions or further clarification, feel free to reach out through the repository's issues or [your email or GitHub profile link].
+- **Questions**: For any questions or further clarification, feel free to reach out through the repository's issues or [gitHub](https://github.com/rvguradiya).
 
 Thank you for contributing and helping to make this repository a valuable resource for the coding community!

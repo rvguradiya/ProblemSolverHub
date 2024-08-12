@@ -20,4 +20,4 @@ This repository contains a collection of coding problems and their solutions in 
 
 ## Contact
 
-For questions or suggestions, please contact [your email or GitHub profile link].
+For questions or suggestions, please contact [gitHub](https://github.com/rvguradiya).
