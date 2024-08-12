@@ -1,0 +1,62 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/*"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        if: contains(github.event.head_commit.message, 'python')
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies (Python)
+        if: contains(github.event.head_commit.message, 'python')
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests (Python)
+        if: contains(github.event.head_commit.message, 'python')
+        run: |
+          pytest
+
+      - name: Set up Node.js
+        if: contains(github.event.head_commit.message, 'node')
+        uses: actions/setup-node@v3
+        with:
+          node-version: "14"
+
+      - name: Install dependencies (Node.js)
+        if: contains(github.event.head_commit.message, 'node')
+        run: |
+          npm install
+
+      - name: Run tests (Node.js)
+        if: contains(github.event.head_commit.message, 'node')
+        run: |
+          npm test
+
+      - name: Build project
+        run: |
+          # Add build steps here, if applicable
+          echo "Building the project..."
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main' && success()
+        run: |
+          # Add deployment steps here
+          echo "Deploying the project..."
