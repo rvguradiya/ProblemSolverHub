@@ -1,6 +1,6 @@
 /*
 
-Create Multi Level Doubly Linked List and then fletten it
+Create Multi Level Doubly Linked List and then flatten it
 
 */
 
