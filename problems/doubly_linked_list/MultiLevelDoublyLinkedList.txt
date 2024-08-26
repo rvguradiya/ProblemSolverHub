@@ -1,0 +1,18 @@
+In this problem we have to create a Multilevel Doubly Linked List from a given array and then we have to flatten it.
+Example:-
+Given array is: [10,50,5,70,62,93,84,0,0,0,70,50,0,0,67,84,32]
+
+MultiLevel Doubly Linked List will be :
+
+10-->50-->5-->70-->62-->93-->84
+          |
+	  70-->50
+		|
+		67-->84
+		|
+		32
+
+
+And then when we flatten it. It will give us following result:
+
+10,50,5,70,50,67,32,84,70,62,93,84
