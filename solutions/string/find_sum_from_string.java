@@ -8,9 +8,10 @@ class FindSum {
             if(str.charAt(i)>='0' && str.charAt(i)<='9'){
                 numStr+=str.charAt(i);
             }else{
-                if(numStr.length()>0)
+                if(numStr.length()>0){
                 num=Integer.parseInt(numStr);
                 sum=sum+num;
+                }
                 numStr="";
             }
         }
